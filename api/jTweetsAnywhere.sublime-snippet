@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[
+\$('.tweets').jTweetsAnywhere({
+    searchParams: ['q=${1:user}'],
+    count: 5,
+    showTweetFeed: {
+      autoConformToTwitterStyleguide: true,
+        showTimestamp: {
+            refreshInterval: 15
+        },
+        autorefresh: {
+            mode: 'trigger-insert',
+            interval: 30
+        },
+        paging: { mode: 'more' }
+    },
+    onDataRequestHandler: function(stats, options) {
+        if (stats.dataRequestCount < 11) {
+            return true;
+        }
+        else {
+            stopAutorefresh(options);
+        }
+    }
+});
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>api</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python</scope> -->
+</snippet>

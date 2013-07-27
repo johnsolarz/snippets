@@ -1,0 +1,15 @@
+<snippet>
+  <content><![CDATA[
+position: absolute;
+top: 50%;
+left: 50%;
+width: ${1:500}px;
+height: ${2:500}px;
+margin-top: -${3:250}px; /* half the height */
+margin-left: -${4:250}px; /* half the width */
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>absolute center</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.css</scope>
+</snippet>

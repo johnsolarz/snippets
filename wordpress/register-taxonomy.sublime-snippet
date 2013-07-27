@@ -1,0 +1,76 @@
+<snippet>
+    <content><![CDATA[
+//hook into the init action and call create_book_taxonomies when it fires
+add_action( 'init', 'create_${1:post_type}_taxonomies', 0);
+
+//create two taxonomies for the post type "${1:post_type}"
+function create_${1:post_type}_taxonomies()
+{
+    // Add new taxonomy, make it hierarchical (like categories)
+    \$labels = array(
+        'name'                  => __( '${3:Names}', 'taxonomy general name' ),
+        'singular_name'         => __( '${4:Name}', 'taxonomy singular name' ),
+        'search_items'          => __( 'Search ${3:Names}' ),
+        'popular_items'         => __( 'Popular ${3:Names}' ),
+        'all_items'             => __( 'All ${3:Names}' ),
+        'parent_item'           => __( 'Parent ${4:Name}' ),
+        'parent_item_colon'     => __( 'Parent ${4:Name}' ),
+        'edit_item'             => __( 'Edit ${4:Name}' ),
+        'update_item'           => __( 'Update ${4:Name}' ),
+        'add_new_item'          => __( 'Add New ${4:Name}' ),
+        'new_item_name'         => __( 'New ${4:Name} Name' ),
+        'add_or_remove_items'   => __( 'Add or remove ${3:Names}'),
+        'choose_from_most_used' => __( 'Choose from most used ${3:Names}'),
+        'menu_name'             => __( '${3:Names}' ),
+    );
+    \$args = array(
+        'labels'            => \$labels,
+        'public'            => true,
+        'show_in_nav_menus' => true,
+        'hierarchical'      => true,
+        'show_tagcloud'     => true,
+        'show_ui'           => true,
+        'query_var'         => true,
+        'rewrite'           => true,
+        'query_var'         => true,
+        //'capabilities'      => '',
+  );
+    register_taxonomy( '${2:name}', array('${1:post_type}'), \$args );
+
+  // Add new taxonomy, NOT hierarchical (like tags)
+  \$labels = array(
+    'name'                         => _x( '${6:Names}', 'taxonomy general name' ),
+    'singular_name'                => _x( '${7:Name}', 'taxonomy singular name' ),
+    'search_items'                 => __( 'Search ${6:Names}' ),
+    'popular_items'                => __( 'Popular ${6:Names}' ),
+    'all_items'                    => __( 'All ${6:Names}' ),
+    'parent_item'                  => null,
+    'parent_item_colon'            => null,
+    'edit_item'                    => __( 'Edit ${7:Name}' ),
+    'update_item'                  => __( 'Update ${7:Name}' ),
+    'add_new_item'                 => __( 'Add New ${7:Name}' ),
+    'new_item_name'                => __( 'New ${7:Name} Name' ),
+    'separate_items_with_commas'   => __( 'Separate ${6:Names} with commas' ),
+    'add_or_remove_items'          => __( 'Add or remove ${6:Names}' ),
+    'choose_from_most_used'        => __( 'Choose from the most used ${6:Names}' ),
+    'menu_name'                    => __( '${6:Names}' )
+  );
+
+  \$args = array(
+    'hierarchical'            => false,
+    'labels'                  => \$labels,
+    'show_ui'                 => true,
+    'show_admin_column'       => true,
+    'update_count_callback'   => '_update_post_term_count',
+    'query_var'               => true,
+    'rewrite'                 => array( 'slug' => '${5:name}' )
+  );
+
+  register_taxonomy( '${5:name}', '${1:post_type}', \$args );
+}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>wp</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python</scope> -->
+</snippet>

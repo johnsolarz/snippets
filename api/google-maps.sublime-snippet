@@ -1,0 +1,56 @@
+<snippet>
+  <content><![CDATA[
+<section class="map">
+  <div id="map_canvas" style="background-color: rgb(233, 233, 233); height: 600px;"></div>
+</section>
+
+<script type="text/javascript">
+function initialize() {
+  var myLatLng = new google.maps.LatLng(41.589898,-93.611841);
+  var escStyle = [
+    {
+      stylers: [
+        { saturation: -99.9 }
+      ]
+    }
+  ];
+  var escMapType = new google.maps.StyledMapType(escStyle, {name: 'esc'});
+  var mapOptions = {
+    center: myLatLng,
+    zoom: 15,
+    disableDefaultUI: true,
+    scrollwheel: false,
+    draggable: false,
+    mapTypeControlOptions: {
+      mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'esc']
+    }
+  };
+  var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+
+  map.mapTypes.set('esc', escMapType);
+  map.setMapTypeId('esc');
+
+  var image = '/wp-content/themes/esc/img/map_pin.png';
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    icon: image,
+    title: 'esc'
+  });
+}
+
+function loadScript() {
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = "http://maps.googleapis.com/maps/api/js?key=AIzaSyCWbvi54jLIjQ7ZoJgqtHG9i3ZTZu1wtfk&sensor=true&callback=initialize";
+  document.body.appendChild(script);
+}
+
+window.onload = loadScript;
+</script>
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>api</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python</scope> -->
+</snippet>

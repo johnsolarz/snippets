@@ -12,6 +12,5 @@ Install
 Author
 ------
 
-John Solarz
-
+John Solarz<br>
 [Eight Seven Central](http://eightsevencentral.com)

@@ -3,10 +3,6 @@ Snippets
 
 Sublime Text 2 snippets library.
 
-Author
-------
-John Solarz, Eight Seven Central
-
 Install
 -------
 

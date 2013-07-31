@@ -1,7 +1,7 @@
 Snippets
 ========
 
-Sublime Text 2 snippets library. Hat tip [mdo/sublime-snippets](https://github.com/mdo/sublime-snippets)
+Sublime Text 2 snippets library. Hat tip [mdo](https://github.com/mdo/sublime-snippets).
 
 Install
 -------
@@ -12,5 +12,6 @@ Install
 Author
 ------
 
-John Solarz&nbsp;&nbsp;
+John Solarz
+
 [Eight Seven Central](http://eightsevencentral.com)

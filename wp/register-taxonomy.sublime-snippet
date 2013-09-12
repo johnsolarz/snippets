@@ -1,12 +1,12 @@
 <snippet>
     <content><![CDATA[
-//hook into the init action and call create_book_taxonomies when it fires
+// Create custom post type "${1:post_type}"
 add_action( 'init', 'create_${1:post_type}_taxonomies', 0);
 
 //create two taxonomies for the post type "${1:post_type}"
 function create_${1:post_type}_taxonomies()
 {
-    // Add new taxonomy, make it hierarchical (like categories)
+    // Add new ${2:name} taxonomy, make it hierarchical (like categories)
     \$labels = array(
         'name'                  => __( '${3:Names}', 'taxonomy general name' ),
         'singular_name'         => __( '${4:Name}', 'taxonomy singular name' ),
@@ -37,7 +37,7 @@ function create_${1:post_type}_taxonomies()
   );
     register_taxonomy( '${2:name}', array('${1:post_type}'), \$args );
 
-  // Add new taxonomy, NOT hierarchical (like tags)
+  // Add new ${5:name} taxonomy, NOT hierarchical (like tags)
   \$labels = array(
     'name'                         => _x( '${6:Names}', 'taxonomy general name' ),
     'singular_name'                => _x( '${7:Name}', 'taxonomy singular name' ),

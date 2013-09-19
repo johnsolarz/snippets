@@ -1,6 +1,6 @@
 <snippet>
     <content><![CDATA[
-// Create custom post type "${1:post_type}"
+// Hook into the init action and call create_${1:post_type}_taxonomies when it fires
 add_action( 'init', 'create_${1:post_type}_taxonomies', 0);
 
 //create two taxonomies for the post type "${1:post_type}"

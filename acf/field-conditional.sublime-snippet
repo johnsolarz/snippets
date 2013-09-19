@@ -1,9 +1,11 @@
 <snippet>
   <content><![CDATA[
+<?php
 \$${1:field} = get_field('${2:field}');
 if (\$${1:field}) {
   echo \$${1:field};
 }
+?>
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>acf</tabTrigger>

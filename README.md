@@ -1,5 +1,5 @@
-Snippets
-========
+Sublime Snippets
+================
 
 Sublime Text 2 snippets library. Hat tip [mdo](https://github.com/mdo/sublime-snippets).
 

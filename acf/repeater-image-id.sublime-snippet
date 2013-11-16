@@ -1,0 +1,14 @@
+<snippet>
+  <content><![CDATA[
+<?php if(get_field('${1:images}')): ?>
+  <?php while(has_sub_field('${1:images}')): ?>
+    <?php \$${2:image} = wp_get_attachment_image_src(get_sub_field('${2:image}'), 'full'); ?>
+    <img src="<?php echo \$${2:image}[0]; ?>" alt="<?php echo get_the_title(get_sub_field('${2:image}')) ?>" >
+  <?php endwhile; ?>
+<?php endif; ?>
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>acf</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python</scope> -->
+</snippet>

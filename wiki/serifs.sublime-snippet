@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[
+In typography, a serif is a small line attached to the end of a stroke in a letter or symbol, such as when handwriting is separated into distinct units for a typewriter or typsetter. A typeface with serifs is called a serif typeface (or serifed typeface). A typeface without serifs is called sans serif or sans-serif, from the French sans, meaning “without”. Some typography sources refer to sans-serif typefaces as "Grotesque" (in German "grotesk") or "Gothic", and serif typefaces as "Roman".
+
+A sans-serif, sans serif, gothic, san serif or simply sans typeface is one that does not have the small projecting features called "serifs" at the end of strokes. The term comes from the French word sans, meaning "without". Sans-serif fonts tend to have less line width variation than serif fonts.
+
+In print, sans-serif fonts are used for headlines rather than for body text. The conventional wisdom holds that serifs help guide the eye along the lines in large blocks of text. Sans-serifs, however, have acquired considerable acceptance for body text in Europe.
+
+Sans-serif fonts have become the most prevalent for display of text on computer screens. This is partly because interlaced screens have shown twittering on the fine details of the horizontal serifs. Additionally, on lower-resolution digital displays, fine details like serifs may disappear or appear too large.
+
+Before the term "sans-serif" became common in English typography, a number of other terms had been used. One of these outmoded terms for sans serif was gothic, which is still used in East Asian typography and sometimes seen in font names like Century Gothic or Trade Gothic.
+Sans-serif fonts are sometimes, especially in older documents, used as a device for emphasis, due to their typically blacker type color.
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>wiki</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python</scope> -->
+</snippet>

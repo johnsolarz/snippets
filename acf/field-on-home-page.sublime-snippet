@@ -1,13 +1,15 @@
 <snippet>
   <content><![CDATA[
 <?php
-\$${1:image} = get_field('${2:header_image}', '${3:options}');
-if( \$${1:image} ): ?>
-<a href="<?php the_field('header_link', 'options'); ?>">
-  <img src="<?php echo \$${1:image}['url']; ?>" alt="<?php echo \$${1:image}['alt']; ?>">
-</a>
-<?php endif; ?>
+\$post_id = false;
 
+if( is_home() )
+{
+  \$post_id = 123; // specif ID of home page
+}
+
+\$${1:var} = get_field('${2:field}', $post_id);
+?>
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>acf</tabTrigger>

@@ -1,0 +1,13 @@
+<snippet>
+  <content><![CDATA[
+In graphic design, a grid is a structure (usually two-dimensional) made up of a series of intersecting straight (vertical, horizontal, and angular) or curved guide lines used to structure content. The grid serves as an armature on which a designer can organize graphic elements (images, glyphs, paragraphs) in a rational, easy to absorb manner. A grid can be use to organize graphic elements in relation to a page, in relation to other graphic elements on the page, or relation to other parts of the same graphic element or shape.
+
+By the mid-1970s instruction of the typographic grid as a part of graphic design curricula had become standard in Europe, North America and much of Latin America. The graphic style of the grid was adopted as a look for corporate communication. In the early 1980s, a reaction against the entrenchment of the grid, particularly its dogmatic use, and association with corporate culture, resulted in some designers rejecting its use in favor of more organic structure. The appearance of the Apple Macintosh computer, and the resulting transition away from type being set by typographers to designers setting type themselves resulted in a wave of experimentation, much of it contrary to the precepts of Tschichold and Müller-Brockmann. The typographic grid continues to be taught today, but more as a useful tool for some projects, not as a requirement or starting point for all page design.
+
+While grid systems have seen significant use in print media, interest from web developers has only recently seen a resurgence. Website design frameworks producing HTML and CSS had existed for a while before newer frameworks popularised the use of grid-based layouts. Some grid systems specify fixed-width elements with pixels, and some are 'fluid', meaning that they call for page element sizing to be in relative units like percentages, rather than absolute units like pixels or points.
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>wiki</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python</scope> -->
+</snippet>

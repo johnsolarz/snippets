@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[
+<?php
+\$${1:image} = get_field('${2:header_image}');
+if( \$${1:image} ): ?>
+<a href="<?php the_field('header_link'); ?>">
+  <img src="<?php echo \$${1:image}['url']; ?>" alt="<?php echo \$${1:image}['alt']; ?>">
+</a>
+<?php endif; ?>
+
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>acf</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python</scope> -->
+</snippet>

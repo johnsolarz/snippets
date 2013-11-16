@@ -1,8 +1,9 @@
 <snippet>
   <content><![CDATA[
-<?php if(get_field('${1:field_name}')): ?>
-  <?php while(has_sub_field('${1:field_name}')): ?>
-    <img src="<?php \$${2:image} = get_sub_field('${3:image}'); echo \$${2:image}['url']; ?>" alt="<?php echo \$${2:image}['alt']; ?>" title="<?php echo \$${2:image}['title']; ?>">
+<?php if(get_field('${1:images}')): ?>
+  <?php while(has_sub_field('${1:images}')): ?>
+    <?php \$${2:image} = get_sub_field('${2:image}'); ?>
+    <img src="<?php echo \$${2:image}['url']; ?>" alt="<?php echo \$${2:image}['alt']; ?>" title="<?php echo \$${2:image}['title']; ?>">
   <?php endwhile; ?>
 <?php endif; ?>
 

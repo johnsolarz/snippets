@@ -3,13 +3,31 @@
 <?php
 // For creating multiple, customized loops.
 // http://codex.wordpress.org/Class_Reference/WP_Query
-\$${1:custom_query} = new WP_Query('${2:cat=-9}'); // exclude category 9
-while(\$${1:custom_query}->have_posts()) : \$${1:custom_query}->the_post(); ?>
-  <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-    <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-    <?php the_content(); ?>
-  </article>
+// ex: Display ${3:post}s tagged with ${6:tag} under ${4:taxonomy} custom taxonomy using tax_query.
+
+// Parameters
+\$args = array(
+  'posts_per_page' => ${2:-1},
+  'post_type'      => '${3:post}',
+  'tax_query'      => array(
+    array(
+      'taxonomy'   => '${4:taxonomy}',
+      'field'      => '${5:slug}',
+      'terms'      => '${6:tag}'
+    )
+  )
+);
+
+// Results
+\$${1:the_query} = new WP_Query( \$args );
+
+// The loop
+while(\$${1:the_query}->have_posts()) : \$${1:the_query}->the_post(); ?>
+
+  <?php // the_content(); ?>
+
 <?php endwhile; ?>
+
 <?php wp_reset_postdata(); // reset the query ?>
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

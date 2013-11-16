@@ -1,0 +1,11 @@
+<snippet>
+  <content><![CDATA[
+Josef Müller-Brockmann, (May 9, 1914, in Rapperswil – August 30, 1996), was a Swiss graphic designer and teacher. He studied architecture, design and history of art at both the University and Kunstgewerbeschule in Zurich. In 1936 he opened his Zurich studio specialising in graphic design, exhibition design and photography. From 1951 he produced concert posters for the Tonhalle in Zurich. In 1958 he became a founding editor of New Graphic Design along with R.P. Lohse, C. Vivarelli, and H. Neuburg. In 1966 he was appointed European design consultant to IBM. Müller-Brockman was author of the 1961 publications The Graphic Artist and his Design Problems, Grid Systems in Graphic Design where he advocates use of the grid for page structure, and the 1971 publications History of the Poster and A History of Visual Communication.
+
+He is recognised for his simple designs and his clean use of typography, notably Akzidenz-Grotesk, shapes and colours which inspires many graphic designers in the 21st century.
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>wiki</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python</scope> -->
+</snippet>

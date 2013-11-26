@@ -4,5 +4,5 @@
 	<option value="">${2:-- Select One --}</option>
 </select>
 ]]></content>
-	<tabTrigger>input</tabTrigger>
+	<tabTrigger>bs-input</tabTrigger>
 </snippet>

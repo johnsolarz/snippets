@@ -6,5 +6,5 @@
 	<div class="btn-group"></div>
 </div>
 ]]></content>
-	<tabTrigger>button</tabTrigger>
+	<tabTrigger>bs-btn</tabTrigger>
 </snippet>

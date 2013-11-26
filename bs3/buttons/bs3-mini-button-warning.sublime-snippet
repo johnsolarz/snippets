@@ -2,5 +2,5 @@
 	<content><![CDATA[
 <${1:button} ${2:type="button"} class="btn btn-xs btn-warning">${3:button}</${1:button}>
 ]]></content>
-	<tabTrigger>button-xs</tabTrigger>
+	<tabTrigger>bs-btn-xs</tabTrigger>
 </snippet>

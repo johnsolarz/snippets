@@ -2,5 +2,5 @@
 	<content><![CDATA[
 <label for="input${1/(\w+)/\u\1/g}" ${2:class="col-sm-2"}>${3}</label>
 ]]></content>
-	<tabTrigger>input</tabTrigger>
+	<tabTrigger>bs-input</tabTrigger>
 </snippet>

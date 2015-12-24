@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[
+/**
+ * Disable ${1:post_type} ${2:editor}
+ * @return {[type]} [description]
+ */
+function remove_post_support() {
+  remove_post_type_support('${1:post_type}', '${2:editor}');
+}
+add_action( 'admin_init', 'remove_post_support' );
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>remove_post_type_support</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.php</scope>
+</snippet>

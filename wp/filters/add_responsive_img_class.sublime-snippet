@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[
+/**
+* Better image handling when adding new image in WYSIWYG editor.
+* Prevents users having to add "img-responsive" to an uploaded image in WYSIWYG editor
+*
+* See https://github.com/roots/roots/pull/1040
+*/
+function add_responsive_img_class(\$html, \$id, \$caption, \$title, \$align, \$url, \$size, \$alt ) {
+
+  \$src = wp_get_attachment_url(\$id); // Grab the current image URL
+
+  if(\$url && !\$caption) { //Linked image without a caption
+    \$html = '<a href="' . \$src .  '" title="' . \$title . '"><img class="img-responsive align' . \$align . '" src="' . \$src . '" alt="' . \$alt . '"></a>';
+  } elseif( \$url && \$caption ) {  //Linked image with a caption
+    \$html = '<figure id="' . \$id . '" class="align' . \$align . '"><a href="' . \$src .  '" title="' . \$title . '"><img class="img-responsive align' . \$align . '" src="' . \$src . '" alt="' . \$alt . '"></a>';
+    \$html .= '<figcaption class="wp-caption-text">' . \$caption . '</figcaption>';
+    \$html .= '</figure>';
+  } else {
+     \$html = '<img class="img-responsive align' . \$align . '" src="' . \$src . '" alt="' . \$alt .'">';
+  }
+
+  return \$html;
+}
+add_filter( 'image_send_to_editor', 'add_responsive_img_class', 10, 8);
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>image_send_to_editor</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.php</scope>
+</snippet>

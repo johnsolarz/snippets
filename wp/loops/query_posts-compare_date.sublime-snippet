@@ -1,0 +1,39 @@
+<snippet>
+  <content><![CDATA[
+/**
+ * Compare todays date to show posts. Alters main loop, use in rare cases.
+ *
+ * @link http://codex.wordpress.org/Function_Reference/query_posts
+ */
+\$now = date("Ymd");
+
+\$query = array(
+  'post_type' => '${1:post_type}',
+  'posts_per_page' => '${2:3}',
+  'meta_query' => array(
+     array(
+      'key' => 'date',
+      'value' => \$now,
+      'compare' => '>=',
+    ),
+    array(
+      'key' => '${3:custom_field_key}',
+      'value' => '${4:custom_field_value}',
+      'compare' => '=',
+    ),
+  ,
+  'meta_key' => '${5:date}',
+  'orderby' => '${6:date}',
+  'order' => 'ASC'
+);
+
+query_posts(\$query);
+if (have_posts()): while (have_posts()) : the_post(); ?>
+  <?php the_content(); ?>
+<?php endwhile; endif; ?>
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>queryposts</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.php</scope>
+</snippet>

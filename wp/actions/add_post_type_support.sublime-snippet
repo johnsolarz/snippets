@@ -1,0 +1,15 @@
+<snippet>
+  <content><![CDATA[
+/**
+ * Add ${1:post_type} ${2:excerpt}
+ */
+function add_${1:post_type}_${2:excerpt}_support() {
+  add_post_type_support( '${1:post_type}', '${2:excerpt}' );
+}
+add_action( 'init', 'add_${1:post_type}_${2:excerpt}_support' );
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>add_post_type_support</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.php</scope>
+</snippet>

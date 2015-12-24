@@ -1,0 +1,43 @@
+<snippet>
+  <content><![CDATA[
+<?php
+/**
+ * For creating multiple, customized loops.
+ * @link http://codex.wordpress.org/Class_Reference/WP_Query
+ *
+ * Loop through ${1:post_type}s in ${3:category} ${5:uncategorized} using tax_query.
+ */
+\$args = array(
+  'post_type'      => '${1:post_type}',
+  'posts_per_page' => ${2:-1},
+  'tax_query'      => array(
+    array(
+      'taxonomy'   => '${3:category}',
+      'field'      => '${4:slug}',
+      'terms'      => '${5:uncategorized}'
+    )
+  )
+);
+
+\$${6:the_query} = new WP_Query( \$args );
+
+while(\$${6:the_query}->have_posts()) : \$${6:the_query}->the_post(); ?>
+
+  <article <?php post_class(); ?>>
+    <header>
+      <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+    </header>
+    <div class="entry-summary">
+      <?php the_excerpt(); ?>
+    </div>
+  </article>
+
+<?php endwhile; ?>
+
+<?php wp_reset_postdata(); // reset the query ?>
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>wpquery</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.php</scope>
+</snippet>

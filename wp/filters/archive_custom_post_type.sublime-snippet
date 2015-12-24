@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[
+/**
+ * Include custom post types in archive.php
+ *
+ * @link http://css-tricks.com/snippets/wordpress/make-archives-php-include-custom-post-types/
+ */
+function archive_custom_post_type( \$query ) {
+  if( is_category() || is_tag() && empty( \$query->query_vars['suppress_filters'] ) ) {
+    \$query->set( 'post_type', array(
+      'nav_menu_item',
+      'post',
+      '${1:post_type}'
+    ));
+    return \$query;
+  }
+}
+add_filter( 'pre_get_posts', 'archive_custom_post_type' );
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>pre_get_posts</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.php</scope>
+</snippet>

@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[
+/**
+ * Use pre_get_posts to query multiple custom post types in a single loop on ${1:home} page
+ *
+ * @link http://codex.wordpress.org/Plugin_API/Action_Reference/pre_get_posts
+ */
+function ${1:home}_page_query( \$query ) {
+    if ( \$query->${2:is_home()} && \$query->is_main_query() ) {
+      \$query->set( 'post_type', array( '${3:post}', '${4:post_type' ) );
+    }
+}
+add_action( 'pre_get_posts', '${1:home}_page_query' );
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>pre_get_posts</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.php</scope>
+</snippet>

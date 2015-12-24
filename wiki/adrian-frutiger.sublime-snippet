@@ -1,9 +1,0 @@
-<snippet>
-  <content><![CDATA[
-Adrian Frutiger (born May 24, 1928 in Unterseen, Canton of Bern, Switzerland) is a typeface designer who influenced the direction of digital typography in the second half of the 20th century and into the 21st. He is best known for creating the Univers and Frutiger typefaces.
-]]></content>
-  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-  <tabTrigger>wiki</tabTrigger>
-  <!-- Optional: Set a scope to limit where the snippet will trigger -->
-  <!-- <scope>source.python</scope> -->
-</snippet>

@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[
+/**
+ * Add image size breakpoints
+ *
+ * Picturefill responsive image support, preset to match default Bootstrap breakpoints.
+ *
+ * @link https://github.com/scottjehl/picturefill
+ * @since 4.4.0
+ *
+ * @package ${12:Theme}
+ */
+
+function add_image_size_breakpoints() {
+  if (current_theme_supports('post-thumbnails')) {
+    add_image_size('screen-xs', ${1:768}, ${2:768}, ${3:true});  // ${1:768}px wide, ${2:768}px high mobile default
+    add_image_size('screen-sm', ${4:724}, ${5:724}, ${6:true});  // ${4:724}px wide, ${5:724}px high @media (min-width: 768px)
+    add_image_size('screen-md', ${7:944}, ${8:944}, ${9:true});  // ${7:944}px wide, ${8:944}px high @media (min-width: 992px)
+    add_image_size('screen-lg', ${10:1144}, ${11:1144}, ${12:true}); // ${10:1144}px wide, ${11:1144}px high @media (min-width: 1200px)
+  }
+}
+add_action( 'after_setup_theme', 'add_image_size_breakpoints' );
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>after_setup_theme</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.php</scope>
+</snippet>

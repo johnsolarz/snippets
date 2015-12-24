@@ -1,0 +1,53 @@
+<snippet>
+  <content><![CDATA[
+/**
+ * Add Custom Post Type Columns to edit screen via admin_init function
+ *
+ * @link http://shibashake.com/wordpress-theme/add-custom-post-type-columns
+ *
+ * 1. Add new custom post type Columns by hooking into the manage_edit-{\$post_type}_columns filter
+ * 2. Render custom post type columns by hooking into the manage_{\$post_type}_posts_custom_column
+ * 3. Admin Column Sorting for a custom field in a Custom Post Type: http://wordpress.org/support/topic/admin-column-sorting
+ */
+add_filter('manage_edit-${1:post_type}_columns', 'add_new_${1:post_type}_columns');
+
+function add_new_${1:post_type}_columns(\$${1:post_type}_columns) {
+    \$new_columns['cb'] = '<input type="checkbox" />'; // Post checkbox
+    \$new_columns['title'] = _x('${1:post_type}', 'column name'); // Post title and common post actions including Edit, Quick Edit, Trash, and View.
+    \$new_columns['id'] = __('ID'); // Example custom column
+    \$new_columns['images'] = __('Images'); // Example custom column
+    \$new_columns['author'] = __('Author'); // Post author
+    \$new_columns['categories'] = __('Categories'); // Post categories
+    \$new_columns['tags'] = __('Tags'); // Post tags
+    \$new_columns['date'] = _x('Date', 'column name'); // Date when post was last modified
+    \$new_columns['comments'] = _x('Comments'); // Number of post comments
+
+    return \$new_columns;
+}
+
+function manage_${1:post_type}_columns(\$column_name, \$id) {
+    global \$wpdb;
+
+    switch (\$column_name) {
+    case 'id':
+        echo \$id;
+    break;
+
+    case 'images':
+        // Get number of images in ${1:post_type}
+        \$num_images = \$wpdb->get_var(\$wpdb->prepare("SELECT COUNT(*) FROM \$wpdb->posts WHERE post_parent = {\$id};"));
+        echo \$num_images;
+    break;
+
+    default:
+        break;
+    } // end switch
+}
+
+add_action('manage_${1:post_type}_posts_custom_column', 'manage_${1:post_type}_columns', 10, 2);
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>manage_posts_custom_columns</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.php</scope>
+</snippet>

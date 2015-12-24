@@ -1,0 +1,13 @@
+<snippet>
+  <content><![CDATA[
+Although the technology of printing text using movable type was invented in China, and despite the esteem which calligraphy held in that civilization, the vast number of Chinese characters meant that few distinctive, complete fonts could be afforded by Chinese printers. For many centuries, creating type started with cutting punches, which acted as the masters. The material that was cut formed a prototype of the character from which type was cast by various means from an alloy usually containing lead. Type design accounted for the limitations of the printing process, such as the splashing properties of ink or the wear on the type itself. In many countries, though not the United States of America, type design could be copyrighted typeface by typeface. The USA offered and continues to offer design patents as an option for typeface design protection.
+
+For the American Type Founders Corporation, and a few others using their technology, each character was drawn in a very large size, over a foot (30 cm) high. The outline was then traced by a Benton pantograph-based engraving machine with a pointer at the hand-held vertex and a cutting tool at the opposite vertex down to a size usually less than a quarter-inch (6 mm). The pantographic engraver was first used to cut punches, and later to directly create matrices.
+
+With the coming of computers, especially those on artists' desktops, type design eventually became a subdivision of computer graphics, employing a drafting program of some sort. Today, visual animators can create complex movies using just fonts. This style is called kinetic typography.[1] Each character design can be traced by a stylus on a digitizing board, or modified from a scanned drawing of somewhat smaller size than that once used for the pantograph, or composed entirely within the computer graphics program itself. Each character is then made into a digitized form to be reconstructed within the graphics display program of a display screen or printer. Copyright was extended to this form. Although a given digitization of a typeface can all too easily be modified by another type designer, such a modified font is usually considered a derivative work, and is covered by the copyright of the original font software.
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>lorem</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python</scope> -->
+</snippet>

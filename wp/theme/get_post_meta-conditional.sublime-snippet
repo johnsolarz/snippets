@@ -1,0 +1,12 @@
+<snippet>
+  <content><![CDATA[
+\$${1:var} = get_post_meta(\$post->ID, '${2:custom-field-key}', true);
+if(\$${1:var}) {
+  echo \$${1:var};
+}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>get_post_meta</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.php</scope>
+</snippet>

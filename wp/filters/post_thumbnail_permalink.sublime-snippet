@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[
+/**
+ * Wrap post thumbnails with the post permalink
+ *
+ * @link https://codex.wordpress.org/Function_Reference/the_post_thumbnail
+ */
+function post_thumbnail_permalink( \$html, \$post_id, \$post_image_id ) {
+  \$html = '<a href="' . get_permalink( \$post_id ) . '" title="' . esc_attr( get_the_title( \$post_id ) ) . '">' . \$html . '</a>';
+  return \$html;
+}
+add_filter( 'post_thumbnail_html', 'post_thumbnail_permalink', 10, 3 );
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>post_thumbnail_html</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.php</scope>
+</snippet>

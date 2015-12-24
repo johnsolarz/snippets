@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[
+/**
+ * Alters main loop, use in rare cases.
+ *
+ * @link http://codex.wordpress.org/Function_Reference/query_posts
+ */
+global \$query_string; // required
+\$posts = query_posts(\$query_string.'&${1:cat=-9}'); //  exclude category 9 or remove the query string to completely override
+while (have_posts()) : the_post(); ?>
+  <?php the_content(); ?>
+<?php endwhile; ?>
+<?php wp_reset_query(); // reset the query ?>
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>queryposts</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.php</scope>
+</snippet>

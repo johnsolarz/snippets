@@ -1,0 +1,39 @@
+<snippet>
+  <content><![CDATA[
+<script type="text/javascript">
+// Register application with Instagram
+// http://instagram.com/developer/clients/manage/
+//
+// Get authentication token
+// https://instagram.com/oauth/authorize/?display=touch&client_id=[ClientID]&redirect_uri=[callbackuri]/&response_type=token
+//
+// Get userID
+// https://api.instagram.com/v1/users/search?q=[USER_NAME]&access_token=[ACCESS_TOKEN]
+//
+// HELP FROM HERE...
+// http://techmonks.net/instagram-using-the-api/
+// http://stuffthatspins.com/2012/03/30/display-instagram-picture-stream-really-easy-with-jquery-and-json/
+// https://forrst.com/posts/Using_the_Instagram_API-ti5
+//
+// small = + data.data[i].images.thumbnail.url +
+// resolution: low_resolution, thumbnail, standard_resolution
+\$(function() {
+  \$.ajax({
+    type: "GET",
+    dataType: "jsonp",
+    cache: false,
+    url: "https://api.instagram.com/v1/users/${1:userID}/media/recent/?access_token=${2:token}",
+    success: function(data) {
+      for (var i = 0; i < 10; i++) {
+        \$(".instagram").append("<div class='instagram-placeholder'><a target='_blank' href='" + data.data[i].link +"'><img class='instagram-image' src='" + data.data[i].images.low_resolution.url +"' /></a></div>");
+      }
+    }
+  });
+});
+</script>
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>instagram</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python</scope> -->
+</snippet>

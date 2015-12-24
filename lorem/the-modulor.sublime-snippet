@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[
+The Modulor is an anthropometric scale of proportions devised by the Swiss-born French architect Le Corbusier (1887–1965).
+
+It was developed as a visual bridge between two incompatible scales, the Imperial system and the Metric system. It is based on the height of a man with his arm raised. It was used as a system to set out a number of Le Corbusier's buildings and was later codified into two books.
+
+Le Corbusier developed the Modulor in the long tradition of Vitruvius, Leonardo da Vinci's Vitruvian Man, the work of Leone Battista Alberti, and other attempts to discover mathematical proportions in the human body and then to use that knowledge to improve both the appearance and function of architecture. The system is based on human measurements, the double unit, the Fibonacci numbers, and the golden ratio. Le Corbusier described it as a "range of harmonious measurements to suit the human scale, universally applicable to architecture and to mechanical things."
+
+With the Modulor, Le Corbusier sought to introduce a scale of visual measures that would unite two virtually incompatible systems: the Anglo Saxon foot and inch and the French Metric system. Whilst he was intrigued by ancient civilisations who used measuring systems linked to the human body: elbow (cubit), finger (digit), thumb (inch) etc., he was troubled by the metre as a measure that was a forty-millionth part of the meridian of the earth.
+
+In 1943, in response to the French National Organisation for Standardisation's (AFNOR) requirement for standardising all the objects involved in the construction process, Le Corbusier asked an apprentice to consider a scale based upon a man with his arm raised to 2.20m in height. The result, in August 1943 was the first graphical representation of the derivation of the scale. This was refined after a visit to the Dean of the Faculty of Sciences in Sorbonne on 7 February 1945 which resulted in the inclusion of a golden section into the representation.
+
+Whilst initially the Modulor Man's height was based on a French man's height of 1.75 metres (5.7 ft) it was changed to 1.83 m in 1946 because "in English detective novels, the good-looking men, such as policemen, are always six feet tall!"" The dimensions were refined to give round numbers and the overall height of the raised arm was set at 2.262m.
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>lorem</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python</scope> -->
+</snippet>

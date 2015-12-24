@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[
+/**
+ * Exclude ${1:category} terms ${2:cat} and ${3:dog} from loop using tax_query.
+ *
+ * @link http://wordpress.stackexchange.com/questions/12217/how-do-i-exclude-a-custom-taxonomy-from-the-post-loop
+ */
+\$args['tax_query'] = array(
+  array(
+    'taxonomy' => '${1:category}',
+    'terms' => array('${2:cat}', '${3:dog}'),
+    'field' => 'slug',
+    'operator' => 'NOT IN',
+  ),
+);
+query_posts(\$args);
+?>
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>queryposts</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.php</scope>
+</snippet>

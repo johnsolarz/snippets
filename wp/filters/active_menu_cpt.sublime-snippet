@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[
+/**
+ * Fix nav menu active classes for custom post types and taxonomies
+ *
+ * @link http://tutorialshares.com/custom-post-type-archive-highlights-both-archive-menu-nav-buttons-on-roots-theme/
+ */
+function active_menu_cpt(\$menu) {
+  if (is_tax('${1:taxonomy}')) {
+    \$menu = str_replace('active', '', \$menu);
+    \$menu = str_replace('menu-${1:taxonomy}', 'menu-${1:taxonomy} active', \$menu);
+  }
+  // For a post type:
+  if ('${2:post_type}' === get_post_type()) {
+    \$menu = str_replace('active', '', \$menu);
+    \$menu = str_replace('menu-${2:post_type}', 'menu-${2:post_type} active', \$menu);
+  }
+  return \$menu;
+}
+add_filter('nav_menu_css_class', 'active_menu_cpt', 400);
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>nav_menu_css_class</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.php</scope>
+</snippet>

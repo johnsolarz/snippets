@@ -1,0 +1,40 @@
+<snippet>
+  <content><![CDATA[
+/**
+* Add all custom taxonomy terms to post_class
+*
+* @link http://wordpress.stackexchange.com/questions/2266/add-post-classes-for-custom-taxonomies-to-custom-post-type/109376#109376
+*/
+if ( ! function_exists('post_class_taxonomies') ) {
+  function post_class_taxonomies(\$classes, \$class, \$ID) {
+
+    \$taxonomies_args = array(
+        'public' => true,
+        '_builtin' => false,
+    );
+
+    \$taxonomies = get_taxonomies( \$taxonomies_args, 'names', 'and' );
+
+    \$terms = get_the_terms( (int) \$ID, (array) \$taxonomies );
+
+    if ( ! empty( \$terms ) ) {
+        foreach ( (array) \$terms as \$order => \$term ) {
+            if ( ! in_array( \$term->slug, \$classes ) ) {
+                \$classes[] = \$term->slug;
+            }
+        }
+    }
+
+    // Optionally add "${1:class}" to post_class()
+    //\$classes[] = '${1:class}';
+
+    return \$classes;
+  }
+}
+add_filter( 'post_class', 'post_class_taxonomies', 10, 3 );
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>post_class</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.php</scope>
+</snippet>

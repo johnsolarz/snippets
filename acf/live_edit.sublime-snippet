@@ -1,9 +1,0 @@
-<snippet>
-  <content><![CDATA[
-<?php post_class(); if(function_exists("live_edit")){ live_edit('${1:post_title}, ${2:post_content}, ${3:field_name}'); } ?>
-]]></content>
-  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-  <tabTrigger>acf</tabTrigger>
-  <!-- Optional: Set a scope to limit where the snippet will trigger -->
-  <!-- <scope>source.python</scope> -->
-</snippet>

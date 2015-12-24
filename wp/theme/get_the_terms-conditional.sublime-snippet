@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[
+\$terms = get_the_terms( \$post->ID, '${1:taxonomy}' );
+if ( \$terms && ! is_wp_error( \$terms ) ) :
+  \$${1:taxonomy}_terms = array();
+  foreach ( \$terms as \$term ) {
+    \$${1:taxonomy}_terms[] = \$term->name;
+  }
+  \$${1:taxonomy} = join( ", ", \$${1:taxonomy}_terms );
+?>
+  <p><?php echo \$${1:taxonomy}; ?></p>
+<?php endif; ?>
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>get_the_terms</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.php</scope>
+</snippet>
